@@ -1,6 +1,6 @@
 ## FlatColor ##
 
-Dark, high contrast colorscheme for gvim and 256 color terminal inspired by [harlequin](https://github.com/nielsmadan/harlequin) and [FlatUi Colors](http://http://flatuicolors.com/).
+Dark, high contrast colorscheme for gvim and 256 color terminal inspired by [harlequin](https://github.com/nielsmadan/harlequin) and [FlatUi Colors](http://flatuicolors.com/).
 
 ### screenshots ###
 
