@@ -44,7 +44,6 @@ let s:mordant = ['#AE0C00', 124] "dark red
 let s:auburn = ['#7C0A02', 88] "darkest red
 let s:moss = ['#004225', 22] "dark green
 
-
 let s:text = s:clouds
 let s:text_bg = ['#121212', 233]
 
@@ -331,3 +330,9 @@ call s:Highlight('CtrlPPrtBase',              '', '', 'bold', '')
 "*** taglist.vim ***
 call s:Highlight('TagListTitle',              s:white, '', 'bold', '')
 call s:Highlight('TagListFileName',           s:pomegranate, '', '', '')
+
+"*** Tabs ***
+call s:Highlight('TabLineFill',               s:darkgreys[1], '', '', '')
+call s:Highlight('TabLine',                   s:greys[1], '', '', '')
+call s:Highlight('TabLineSel',                s:white, s:peterriver, '', '')
+
