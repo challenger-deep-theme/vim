@@ -197,7 +197,7 @@ endif
 
 call s:HighlightX('VisualNOS',      '', s:greys[4], '', '')
 call s:HighlightX('Visual',         '', s:greys[4], '', '')
-call s:Highlight('Search',          s:black, s:emerald, '', '')
+call s:Highlight('Search',          s:black, s:orange, '', '')
 call s:Highlight('IncSearch',       s:black, s:gold, '', '')
 
 call s:Highlight('Pmenu',           s:black, s:orange, '', '')
@@ -336,3 +336,7 @@ call s:Highlight('TabLineFill',               s:darkgreys[1], '', '', '')
 call s:Highlight('TabLine',                   s:greys[1], '', '', '')
 call s:Highlight('TabLineSel',                s:white, s:peterriver, '', '')
 
+"*** CtrlSpace ***
+call s:Highlight('CtrlSpaceSelected',         s:white, s:cerise, '', '')
+call s:Highlight('CtrlSpaceNormal',           '', '', '', '')
+call s:Highlight('CtrlSpaceFound',            s:white, s:peterriver, '', '')
