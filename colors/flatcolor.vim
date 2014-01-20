@@ -186,6 +186,8 @@ call s:Highlight('StatusLine',      s:white, s:black, 'bold', '')
 call s:Highlight('StatusLineNC',    s:greys[1], s:darkgreys[2], 'bold', '')
 call s:Highlight('VertSplit',       s:greys[1], s:darkgreys[2], 'bold', '')
 
+call s:Highlight('Conceal',        s:emerald, '', '', '')
+
 call s:Highlight('ModeMsg',         s:gold, '', 'bold', '')
 
 if has("spell")
@@ -197,8 +199,8 @@ endif
 
 call s:HighlightX('VisualNOS',      '', s:greys[4], '', '')
 call s:HighlightX('Visual',         '', s:greys[4], '', '')
-call s:Highlight('Search',          s:black, s:orange, '', '')
-call s:Highlight('IncSearch',       s:black, s:gold, '', '')
+call s:Highlight('Search',          s:white, s:cerise, '', '')
+call s:Highlight('IncSearch',       s:white, s:cerise, '', '')
 
 call s:Highlight('Pmenu',           s:black, s:orange, '', '')
 call s:Highlight('PmenuSel',        s:orange, s:black, 'bold', '')
@@ -337,6 +339,6 @@ call s:Highlight('TabLine',                   s:greys[1], '', '', '')
 call s:Highlight('TabLineSel',                s:white, s:peterriver, '', '')
 
 "*** CtrlSpace ***
-call s:Highlight('CtrlSpaceSelected',         s:white, s:cerise, '', '')
+call s:Highlight('CtrlSpaceSelected',         s:white, s:peterriver, '', '')
 call s:Highlight('CtrlSpaceNormal',           '', '', '', '')
-call s:Highlight('CtrlSpaceFound',            s:white, s:peterriver, '', '')
+call s:Highlight('CtrlSpaceFound',            s:white, s:cerise, '', '')
