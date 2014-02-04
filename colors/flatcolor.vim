@@ -45,7 +45,7 @@ let s:auburn = ['#7C0A02', 88] "darkest red
 let s:moss = ['#004225', 22] "dark green
 
 let s:text = s:clouds
-let s:text_bg = ['#121212', 233]
+let s:text_bg = ['#1C1C1C', 234]
 
 
 " pass empty string for defaults: guifg - fg, guibg - bg, gui - none, guisp - fg
@@ -169,22 +169,22 @@ call s:Highlight('MatchParen',      s:black, s:orange, 'bold', '')
 
 call s:Highlight('LineNr',          s:greys[2], s:darkgreys[0], '', '')
 call s:Highlight('NonText',         s:greys[2], '', '', '')
-call s:HighlightX('CursorColumn',   '', s:darkgreys[2], '', '')
-call s:HighlightX('CursorLine',     '', s:darkgreys[2], '', '')
-call s:Highlight('SignColumn',      '', s:darkgreys[2], '', '')
-call s:HighlightX('ColorColumn',    '', s:darkgreys[2], '', '')
+call s:HighlightX('CursorColumn',   '', s:darkgreys[3], '', '')
+call s:HighlightX('CursorLine',     '', s:darkgreys[3], '', '')
+call s:Highlight('SignColumn',      '', s:darkgreys[3], '', '')
+call s:HighlightX('ColorColumn',    '', s:darkgreys[3], '', '')
 
 call s:Highlight('Error',           s:mordant, s:greys[5], 'bold', '')
 call s:Highlight('ErrorMsg',        s:mordant, '', 'bold', '')
 call s:Highlight('WarningMsg',      s:mordant, '', '', '')
 
-call s:Highlight('Cursor',          s:darkgreys[2], s:white, '', '')
-call s:Highlight('vCursor',         s:darkgreys[2], s:white, '', '')
-call s:Highlight('iCursor',         s:darkgreys[2], s:white, '', '')
+call s:Highlight('Cursor',          s:darkgreys[3], s:white, '', '')
+call s:Highlight('vCursor',         s:darkgreys[3], s:white, '', '')
+call s:Highlight('iCursor',         s:darkgreys[3], s:white, '', '')
 
 call s:Highlight('StatusLine',      s:white, s:black, 'bold', '')
-call s:Highlight('StatusLineNC',    s:greys[1], s:darkgreys[2], 'bold', '')
-call s:Highlight('VertSplit',       s:greys[1], s:darkgreys[2], 'bold', '')
+call s:Highlight('StatusLineNC',    s:greys[1], s:darkgreys[3], 'bold', '')
+call s:Highlight('VertSplit',       s:greys[1], s:darkgreys[3], 'bold', '')
 
 call s:Highlight('Conceal',        s:emerald, '', '', '')
 
