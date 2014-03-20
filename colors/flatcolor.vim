@@ -152,7 +152,7 @@ call s:Highlight('SpecialComment',  s:emerald, '', 'bold', '')
 call s:Highlight('Todo',            s:emerald, '', 'bold', '')
 
 call s:Highlight('String',          s:gold, '', '', '') 
-call s:Highlight('SpecialKey',      s:peterriver, '', 'bold', '')
+call s:Highlight('SpecialKey',      s:darkgreys[4], '', 'bold', '')
 call s:Highlight('Special',         s:peterriver, '', 'bold', '')
 call s:Highlight('SpecialChar',     s:peterriver, '', 'bold', '')
 
@@ -289,8 +289,8 @@ call s:Highlight('htmlEvent',                s:pomegranate, '', '', '')
 call s:Highlight('htmlEventDQ',              s:turquoise, '', '', '')
 call s:Highlight('htmlH1',                   '', '', 'bold', '')
 call s:Highlight('htmlH2',                   '', '', 'bold', '')
-call s:Highlight('htmlH3',                   '', '', 'italic', '')
-call s:Highlight('htmlH4',                   '', '', 'italic', '')
+call s:Highlight('htmlH3',                   '', '', 'bold', '')
+call s:Highlight('htmlH4',                   '', '', 'bold', '')
 call s:Highlight('htmlScriptTag',            s:turquoise, '', '', '')
 
 "*** HTML/JAVASCRIPT ***
