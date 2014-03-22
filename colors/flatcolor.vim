@@ -15,6 +15,10 @@ if !has("gui_running") && &t_Co != 256
     finish
 endif
 
+if !exists("g:flatcolor_cursorlinebold")
+    let g:flatcolor_cursorlinebold=0
+endif
+
 let colors_name = "flatcolor"
 
 
@@ -170,7 +174,11 @@ call s:Highlight('MatchParen',      s:black, s:orange, 'bold', '')
 call s:Highlight('LineNr',          s:greys[2], s:darkgreys[0], '', '')
 call s:Highlight('NonText',         s:greys[2], '', '', '')
 call s:HighlightX('CursorColumn',   '', s:darkgreys[3], '', '')
-call s:HighlightX('CursorLine',     '', s:darkgreys[3], '', '')
+if g:flatcolor_cursorlinebold == 1
+  call s:HighlightX('CursorLine',     '', s:darkgreys[3], 'bold', '')
+else
+  call s:HighlightX('CursorLine',     '', s:darkgreys[3], 'none', '')
+endif
 call s:Highlight('SignColumn',      '', s:darkgreys[3], '', '')
 call s:HighlightX('ColorColumn',    '', s:darkgreys[3], '', '')
 
