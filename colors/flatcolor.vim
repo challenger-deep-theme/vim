@@ -199,10 +199,14 @@ call s:Highlight('Conceal',        s:emerald, '', '', '')
 call s:Highlight('ModeMsg',         s:gold, '', 'bold', '')
 
 if has("spell")
-    call s:HighlightX('SpellBad',    '', '', 'undercurl', s:mordant)
+    call s:Highlight('SpellBad',     s:auburn, '', '', '')
+    call s:HighlightX('SpellBad',    '', '', 'undercurl', s:auburn)
+    call s:Highlight('SpellCap',     s:auburn, '', '', '')
     call s:HighlightX('SpellCap',    '', '', 'undercurl', s:auburn)
+    call s:Highlight('SpellLocal',     s:auburn, '', '', '')
     call s:HighlightX('SpellLocal',  '', '', 'undercurl', s:auburn)
-    call s:HighlightX('SpellRare',   '', '', 'undercurl', s:white)
+    call s:Highlight('SpellRare',     s:auburn, '', '', '')
+    call s:HighlightX('SpellRare',   '', '', 'undercurl', s:auburn)
 endif
 
 call s:HighlightX('VisualNOS',      '', s:greys[4], '', '')
