@@ -27,7 +27,7 @@ let s:black = ['#000000', 0]
 let s:greys = [['#BEBEBE', 250], ['#808080', 244], ['#696969', 242], ['#545454', 240], ['#343434', 236], ['#080808', 232]]
 let s:darkgreys = [['#080808',232],['#121212',233],["#1c1c1c",234],['#262626',235],["#303030",236],["#3a3a3a",237],["#444444",238],["#4e4e4e",239]]
 
-let s:clouds = ['#ECF0F1', 15] " very light gray
+let s:clouds = ['#bcbcbc', 250] " very light gray
 
 let s:cerise = ['#FF0033', 197] " red/ping
 
@@ -39,6 +39,8 @@ let s:pomegranate = ['#C0392B', 196] "red
 
 let s:peterriver = ['#3498DB', 68] "light blue
 
+let s:purple = ['#875faf', 97] " purple
+
 let s:turquoise = ['#1ABC9C', 37]
 
 let s:gold = ['#FFD700', 220]
@@ -49,7 +51,7 @@ let s:auburn = ['#7C0A02', 88] "darkest red
 let s:moss = ['#004225', 22] "dark green
 
 let s:text = s:clouds
-let s:text_bg = ['#1C1C1C', 234]
+let s:text_bg = ['#262626', 235]
 
 
 " pass empty string for defaults: guifg - fg, guibg - bg, gui - none, guisp - fg
@@ -121,7 +123,7 @@ function! s:HighlightX(group_name, guifg, guibg, gui, guisp)
     exe hi_str
 endfunction
 
-call s:Highlight('Normal', s:text, s:text_bg, '', '')
+call s:HighlightX('Normal', s:text, s:text_bg, '', '')
 
 call s:Highlight('Statement',   s:cerise, '', 'bold', '')
 call s:Highlight('Keyword',     s:cerise, '', 'bold', '')
@@ -171,16 +173,17 @@ call s:Highlight('Folded',          s:greys[1], s:black, '', '')
 
 call s:Highlight('MatchParen',      s:black, s:orange, 'bold', '')
 
-call s:Highlight('LineNr',          s:greys[2], s:darkgreys[0], '', '')
+call s:Highlight('LineNr',          s:greys[2], s:darkgreys[2], '', '')
+
 call s:Highlight('NonText',         s:greys[2], '', '', '')
-call s:HighlightX('CursorColumn',   '', s:darkgreys[3], '', '')
+call s:HighlightX('CursorColumn',   '', s:darkgreys[4], '', '')
 if g:flatcolor_cursorlinebold == 1
-  call s:HighlightX('CursorLine',     '', s:darkgreys[3], 'bold', '')
+  call s:HighlightX('CursorLine',     '', s:darkgreys[4], 'bold', '')
 else
-  call s:HighlightX('CursorLine',     '', s:darkgreys[3], 'none', '')
+  call s:HighlightX('CursorLine',     '', s:darkgreys[4], 'none', '')
 endif
-call s:Highlight('SignColumn',      '', s:darkgreys[3], '', '')
-call s:HighlightX('ColorColumn',    '', s:darkgreys[3], '', '')
+call s:Highlight('SignColumn',      '', s:darkgreys[4], '', '')
+call s:HighlightX('ColorColumn',    '', s:darkgreys[4], '', '')
 
 call s:Highlight('Error',           s:mordant, s:greys[5], 'bold', '')
 call s:Highlight('ErrorMsg',        s:mordant, '', 'bold', '')
@@ -209,8 +212,8 @@ if has("spell")
     call s:HighlightX('SpellRare',   '', '', 'undercurl', s:auburn)
 endif
 
-call s:HighlightX('VisualNOS',      '', s:greys[4], '', '')
-call s:HighlightX('Visual',         '', s:greys[4], '', '')
+call s:HighlightX('VisualNOS',      '', s:purple, '', '')
+call s:HighlightX('Visual',         '', s:purple, '', '')
 call s:Highlight('Search',          s:white, s:cerise, '', '')
 call s:Highlight('IncSearch',       s:white, s:cerise, '', '')
 
