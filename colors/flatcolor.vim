@@ -151,7 +151,7 @@ function! s:HighlightX(group_name, guifg, guibg, gui, guisp)
     exe hi_str
 endfunction
 
-call s:Highlight('Normal', s:text, s:text_bg, '', '')
+call s:HighlightX('Normal', s:text, s:text_bg, '', '')
 
 call s:Highlight('Statement',   s:cerise, '', 'bold', '')
 call s:Highlight('Keyword',     s:cerise, '', 'bold', '')
@@ -201,16 +201,17 @@ call s:Highlight('Folded',          s:greys[1], s:black, '', '')
 
 call s:Highlight('MatchParen',      s:black, s:orange, 'bold', '')
 
-call s:Highlight('LineNr',          s:greys[2], s:darkgreys[0], '', '')
+call s:Highlight('LineNr',          s:greys[2], s:darkgreys[2], '', '')
+
 call s:Highlight('NonText',         s:greys[2], '', '', '')
-call s:HighlightX('CursorColumn',   '', s:darkgreys[3], '', '')
+call s:HighlightX('CursorColumn',   '', s:darkgreys[4], '', '')
 if g:flatcolor_cursorlinebold == 1
-  call s:HighlightX('CursorLine',     '', s:darkgreys[3], 'bold', '')
+  call s:HighlightX('CursorLine',     '', s:darkgreys[4], 'bold', '')
 else
-  call s:HighlightX('CursorLine',     '', s:darkgreys[3], 'none', '')
+  call s:HighlightX('CursorLine',     '', s:darkgreys[4], 'none', '')
 endif
-call s:Highlight('SignColumn',      '', s:darkgreys[3], '', '')
-call s:HighlightX('ColorColumn',    '', s:darkgreys[3], '', '')
+call s:Highlight('SignColumn',      '', s:darkgreys[4], '', '')
+call s:HighlightX('ColorColumn',    '', s:darkgreys[4], '', '')
 
 call s:Highlight('Error',           s:pomegranate, s:greys[5], 'bold', '')
 call s:Highlight('ErrorMsg',        s:pomegranate, '', 'bold', '')
@@ -239,8 +240,8 @@ if has("spell")
     call s:HighlightX('SpellRare',   '', '', 'undercurl', s:pomegranate)
 endif
 
-call s:HighlightX('VisualNOS',      '', s:greys[4], '', '')
-call s:HighlightX('Visual',         '', s:greys[4], '', '')
+call s:HighlightX('VisualNOS',      '', s:purple, '', '')
+call s:HighlightX('Visual',         '', s:purple, '', '')
 call s:Highlight('Search',          s:white, s:cerise, '', '')
 call s:Highlight('IncSearch',       s:white, s:cerise, '', '')
 
