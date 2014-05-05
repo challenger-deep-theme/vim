@@ -19,37 +19,67 @@ if !exists("g:flatcolor_cursorlinebold")
     let g:flatcolor_cursorlinebold=0
 endif
 
+if !exists("g:flatcolor_termcolors")
+    let g:flatcolor_tremcolors=256
+endif
+
 let colors_name = "flatcolor"
 
 
-let s:white = ['#FFFFFF', 15]
-let s:black = ['#000000', 0]
-let s:greys = [['#BEBEBE', 250], ['#808080', 244], ['#696969', 242], ['#545454', 240], ['#343434', 236], ['#080808', 232]]
-let s:darkgreys = [['#080808',232],['#121212',233],["#1c1c1c",234],['#262626',235],["#303030",236],["#3a3a3a",237],["#444444",238],["#4e4e4e",239]]
 
-let s:clouds = ['#ECF0F1', 15] " very light gray
+if g:flatcolor_termcolors == 256
+  let s:white = ['#FFFFFF', 15]
+  let s:black = ['#000000', 0]
+  let s:greys = [['#BEBEBE', 250], ['#808080', 244], ['#696969', 242], ['#545454', 240], ['#343434', 236], ['#080808', 232]]
+  let s:darkgreys = [['#080808',232],['#121212',233],["#1c1c1c",234],['#262626',235],["#303030",236],["#3a3a3a",237],["#444444",238],["#4e4e4e",239]]
 
-let s:cerise = ['#FF0033', 197] " red/ping
+  let s:clouds = ['#ECF0F1', 15] " very light gray
 
-let s:emerald = ['#2ECC71', 41] " green
+  let s:cerise = ['#FF0033', 197] " red/ping
 
-let s:orange = ['#ff5f00', 202]
+  let s:emerald = ['#2ECC71', 41] " green
 
-let s:pomegranate = ['#C0392B', 196] "red
+  let s:orange = ['#ff5f00', 202]
 
-let s:peterriver = ['#3498DB', 68] "light blue
+  let s:pomegranate = ['#C0392B', 196] "red
 
-let s:turquoise = ['#1ABC9C', 37]
+  let s:peterriver = ['#3498DB', 68] "light blue
 
-let s:gold = ['#FFD700', 220]
+  let s:turquoise = ['#1ABC9C', 37]
 
-let s:mordant = ['#AE0C00', 124] "dark red
+  let s:gold = ['#FFD700', 220]
 
-let s:auburn = ['#7C0A02', 88] "darkest red
-let s:moss = ['#004225', 22] "dark green
+  let s:moss = ['#004225', 22] "dark green
 
-let s:text = s:clouds
-let s:text_bg = ['#1C1C1C', 234]
+  let s:text = s:clouds
+  let s:text_bg = ['#1C1C1C', 234]
+else
+  let s:white = ['#BDC3C7', 15]
+  let s:black = ['#292929', 0]
+  let s:greys = [['#BEBEBE', 250], ['#808080', 244], ['#696969', 242], ['#545454', 240], ['#343434', 236], ['#080808', 232]]
+  let s:darkgreys = [['#080808',232],['#121212',233],["#1c1c1c",234],['#262626',235],["#303030",236],["#3a3a3a",237],["#444444",238],["#4e4e4e",239]]
+
+  let s:clouds = ['#ECF0F1', 15] " very light gray
+
+  let s:cerise = ['#FF0033', 1] " red/ping
+
+  let s:emerald = ['#2ECC71', 2] " green
+
+  let s:orange = ['#F39C12', 11]
+
+  let s:pomegranate = ['#C0392B', 9] "red
+
+  let s:peterriver = ['#3498DB', 4] "light blue
+
+  let s:turquoise = ['#1ABC9C', 6]
+
+  let s:gold = ['#F1C40F', 3]
+
+  let s:moss = ['#27ae60', 10] "dark green
+
+  let s:text = s:clouds
+  let s:text_bg = ['#252525', 8]
+endif
 
 
 " pass empty string for defaults: guifg - fg, guibg - bg, gui - none, guisp - fg
@@ -182,9 +212,9 @@ endif
 call s:Highlight('SignColumn',      '', s:darkgreys[3], '', '')
 call s:HighlightX('ColorColumn',    '', s:darkgreys[3], '', '')
 
-call s:Highlight('Error',           s:mordant, s:greys[5], 'bold', '')
-call s:Highlight('ErrorMsg',        s:mordant, '', 'bold', '')
-call s:Highlight('WarningMsg',      s:mordant, '', '', '')
+call s:Highlight('Error',           s:pomegranate, s:greys[5], 'bold', '')
+call s:Highlight('ErrorMsg',        s:pomegranate, '', 'bold', '')
+call s:Highlight('WarningMsg',      s:pomegranate, '', '', '')
 
 call s:Highlight('Cursor',          s:darkgreys[3], s:white, '', '')
 call s:Highlight('vCursor',         s:darkgreys[3], s:white, '', '')
@@ -199,14 +229,14 @@ call s:Highlight('Conceal',        s:emerald, '', '', '')
 call s:Highlight('ModeMsg',         s:gold, '', 'bold', '')
 
 if has("spell")
-    call s:Highlight('SpellBad',     s:auburn, '', '', '')
-    call s:HighlightX('SpellBad',    '', '', 'undercurl', s:auburn)
-    call s:Highlight('SpellCap',     s:auburn, '', '', '')
-    call s:HighlightX('SpellCap',    '', '', 'undercurl', s:auburn)
-    call s:Highlight('SpellLocal',     s:auburn, '', '', '')
-    call s:HighlightX('SpellLocal',  '', '', 'undercurl', s:auburn)
-    call s:Highlight('SpellRare',     s:auburn, '', '', '')
-    call s:HighlightX('SpellRare',   '', '', 'undercurl', s:auburn)
+    call s:Highlight('SpellBad',     s:pomegranate, '', '', '')
+    call s:HighlightX('SpellBad',    '', '', 'undercurl', s:pomegranate)
+    call s:Highlight('SpellCap',     s:pomegranate, '', '', '')
+    call s:HighlightX('SpellCap',    '', '', 'undercurl', s:pomegranate)
+    call s:Highlight('SpellLocal',     s:pomegranate, '', '', '')
+    call s:HighlightX('SpellLocal',  '', '', 'undercurl', s:pomegranate)
+    call s:Highlight('SpellRare',     s:pomegranate, '', '', '')
+    call s:HighlightX('SpellRare',   '', '', 'undercurl', s:pomegranate)
 endif
 
 call s:HighlightX('VisualNOS',      '', s:greys[4], '', '')
@@ -219,7 +249,7 @@ call s:Highlight('PmenuSel',        s:orange, s:black, 'bold', '')
 call s:Highlight('Pmenu',           '', s:greys[5], '', '')
 call s:Highlight('Pmenu',           s:emerald, '', '', '')
 
-call s:HighlightX('DiffDelete',     s:auburn, s:auburn, '', '')
+call s:HighlightX('DiffDelete',     s:pomegranate, s:pomegranate, '', '')
 call s:HighlightX('DiffText',       '', s:greys[3], '', '')
 call s:HighlightX('DiffChange',     '', s:greys[4], '', '')
 call s:HighlightX('DiffAdd',        '', s:moss, '', '')
@@ -270,7 +300,7 @@ call s:Highlight('clojureCond',           s:cerise, '', '', '')
 call s:Highlight('clojureParen0',         s:text, '', '', '')
 call s:Highlight('clojureMacro',          s:turquoise, '', 'bold', '')
 call s:Highlight('clojureDispatch',       s:peterriver, '', 'bold', '')
-call s:Highlight('clojureError',          s:black, s:mordant, 'bold', '')
+call s:Highlight('clojureError',          s:black, s:pomegranate, 'bold', '')
 
 "*** SCALA ***
 call s:Highlight('scalaClassName',        s:orange, '', '', '')
@@ -338,7 +368,7 @@ call s:Highlight('EasyMotionTarget',          s:cerise, '', 'bold', '')
 call s:Highlight('EasyMotionShade',           s:greys[2], '', '', '')
 
 "*** CtrlP ***
-call s:Highlight('CtrlPNoEntries',            s:mordant, '', '', '')
+call s:Highlight('CtrlPNoEntries',            s:pomegranate, '', '', '')
 call s:Highlight('CtrlPPrtBase',              '', '', 'bold', '')
 
 "*** taglist.vim ***
