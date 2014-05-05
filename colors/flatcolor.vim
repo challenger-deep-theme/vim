@@ -51,6 +51,8 @@ if g:flatcolor_termcolors == 256
 
   let s:moss = ['#004225', 22] "dark green
 
+  let s:purple = ['#875faf', 97] " purple
+
   let s:text = s:clouds
   let s:text_bg = ['#1C1C1C', 234]
 else
@@ -76,6 +78,8 @@ else
   let s:gold = ['#F1C40F', 3]
 
   let s:moss = ['#27ae60', 10] "dark green
+
+  let s:purple = ['#9b59b6', 5] " purple
 
   let s:text = s:clouds
   let s:text_bg = ['#252525', 8]
