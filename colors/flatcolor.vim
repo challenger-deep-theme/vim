@@ -20,7 +20,7 @@ if !exists("g:flatcolor_cursorlinebold")
 endif
 
 if !exists("g:flatcolor_termcolors")
-    let g:flatcolor_tremcolors=256
+    let g:flatcolor_termcolors=256
 endif
 
 let colors_name = "flatcolor"
