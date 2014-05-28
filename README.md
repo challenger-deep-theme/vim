@@ -12,7 +12,7 @@ Dark, high contrast colorscheme for gvim and 256 color terminal inspired by [har
     If it is set to 16 ,this colorscheme will attempt to use the standard 16 colors of your terminal emulator.
 
     Example Flatcolor Terminal Colors:
-    ```
+```
 ! ~/.Xresource
 ! Colors
 
@@ -54,7 +54,7 @@ URxvt*color14:          #16a085
 URxvt*color7:           #ecf0f1
 URxvt*color15:          #bdc3c7
 URxvt.foreground :      #bdc3c7
-      ```
+```
 
 
 ### screenshots ###
