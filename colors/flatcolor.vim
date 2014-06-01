@@ -55,9 +55,10 @@ if g:flatcolor_termcolors == 256
 
   let s:text = s:clouds
   let s:text_bg = ['#1C1C1C', 234]
+  let s:text_bg_light = ['#303030', 236]
 else
   let s:white = ['#BDC3C7', 15]
-  let s:black = ['#292929', 0]
+  let s:black = ['#292929', 8]
   let s:greys = [['#BEBEBE', 250], ['#808080', 244], ['#696969', 242], ['#545454', 240], ['#343434', 236], ['#080808', 232]]
   let s:darkgreys = [['#080808',232],['#121212',233],["#1c1c1c",234],['#262626',235],["#303030",236],["#3a3a3a",237],["#444444",238],["#4e4e4e",239]]
 
@@ -83,6 +84,7 @@ else
 
   let s:text = s:clouds
   let s:text_bg = ['#252525', 8]
+  let s:text_bg_light = ['#2b2b2b', 0]
 endif
 
 
@@ -389,3 +391,7 @@ call s:Highlight('TabLineSel',                s:white, s:peterriver, '', '')
 call s:Highlight('CtrlSpaceSelected',         s:white, s:peterriver, '', '')
 call s:Highlight('CtrlSpaceNormal',           '', '', '', '')
 call s:Highlight('CtrlSpaceFound',            s:white, s:cerise, '', '')
+
+"*** IndentGuides ***
+call s:Highlight('IndentGuidesOdd',           '', s:text_bg_light, '', '')
+call s:Highlight('IndentGuidesEven',          '', s:text_bg, '', '')
