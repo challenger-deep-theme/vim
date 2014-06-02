@@ -393,5 +393,5 @@ call s:Highlight('CtrlSpaceNormal',           '', '', '', '')
 call s:Highlight('CtrlSpaceFound',            s:white, s:cerise, '', '')
 
 "*** IndentGuides ***
-call s:Highlight('IndentGuidesOdd',           '', s:text_bg_light, '', '')
-call s:Highlight('IndentGuidesEven',          '', s:text_bg, '', '')
+call s:Highlight('IndentGuidesOdd',           '', s:text_bg, '', '')
+call s:Highlight('IndentGuidesEven',          '', s:text_bg_light, '', '')
