@@ -11,6 +11,11 @@ Dark, high contrast colorscheme for gvim and 256 color terminal inspired by [har
     This options sets the terminal colors to 16 or 256 Colors. Default value is 256.
     If it is set to 16 ,this colorscheme will attempt to use the standard 16 colors of your terminal emulator.
 
+  * g:flatcolor_bluebg
+    This option sets the background color of the colorscheme to a dark blue if its value is 1.
+    To set the background to a dark grey color set it to 0.
+    Default value is 0.
+
     Example Flatcolor Terminal Colors:
 ```
 ! ~/.Xresource

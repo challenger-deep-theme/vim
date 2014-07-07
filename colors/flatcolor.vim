@@ -19,6 +19,10 @@ if !exists("g:flatcolor_cursorlinebold")
     let g:flatcolor_cursorlinebold=0
 endif
 
+if !exists("g:flatcolor_bluebg")
+    let g:flatcolor_bluebg=0
+endif
+
 if !exists("g:flatcolor_termcolors")
     let g:flatcolor_termcolors=256
 endif
@@ -54,7 +58,15 @@ if g:flatcolor_termcolors == 256
   let s:purple = ['#875faf', 97] " purple
 
   let s:text = s:clouds
-  let s:text_bg = ['#1C1C1C', 234]
+
+  if g:flatcolor_bluebg == 1
+    let s:text_bg = ['#2c3e50', 23]
+    let s:cursorline = ['#34495e', 59]
+  else
+    let s:text_bg = ['#1C1C1C', 234]
+    let s:cursorline = ['#808080', 244]
+  endif
+
   let s:text_bg_light = ['#303030', 236]
 else
   let s:white = ['#BDC3C7', 15]
@@ -83,7 +95,13 @@ else
   let s:purple = ['#9b59b6', 5] " purple
 
   let s:text = s:clouds
-  let s:text_bg = ['#252525', 8]
+  if g:flatcolor_bluebg == 1
+    let s:text_bg = ['#2c3e50', 8]
+    let s:cursorline = ['#34495e', 0]
+  else
+    let s:text_bg = ['#1C1C1C', 8]
+    let s:cursorline = ['#808080', 0]
+  endif
   let s:text_bg_light = ['#2b2b2b', 0]
 endif
 
@@ -212,9 +230,9 @@ call s:Highlight('LineNr',          s:greys[2], s:darkgreys[2], '', '')
 call s:Highlight('NonText',         s:greys[2], '', '', '')
 call s:HighlightX('CursorColumn',   '', s:darkgreys[4], '', '')
 if g:flatcolor_cursorlinebold == 1
-  call s:HighlightX('CursorLine',     '', s:darkgreys[4], 'bold', '')
+  call s:HighlightX('CursorLine',     '', s:cursorline, 'bold', '')
 else
-  call s:HighlightX('CursorLine',     '', s:darkgreys[4], 'none', '')
+  call s:HighlightX('CursorLine',     '', s:cursorline, 'none', '')
 endif
 call s:Highlight('SignColumn',      '', s:darkgreys[4], '', '')
 call s:HighlightX('ColorColumn',    '', s:darkgreys[4], '', '')
