@@ -1,6 +1,6 @@
 ## FlatColor ##
 
-![FlatColor](http://uppix.com/f-flatcolor_multib54997651001824f8.png)
+![FlatColor](http://postimg.org/image/m5jzfr0wb/)
 
 A colorscheme for gvim and 256 color terminal inspired by [FlatUi Colors](http://flatuicolors.com/).
 
