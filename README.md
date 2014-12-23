@@ -1,22 +1,23 @@
 ## FlatColor ##
 
-Dark, high contrast colorscheme for gvim and 256 color terminal inspired by [harlequin](https://github.com/nielsmadan/harlequin) and [FlatUi Colors](http://flatuicolors.com/).
+![FlatColor](http://uppix.com/f-flatcolor_multib54997651001824f8.png)
+
+Dark, high contrast colorscheme for gvim and 256 color terminal inspired by [FlatUi Colors](http://flatuicolors.com/).
 
 
 ### Options ###
-  * g:flatcolor_cursorlinebold
-    If this options value is 1 the cursorline is bold. It is set to 0 by default.
-
   * g:flatcolor_termcolors
     This options sets the terminal colors to 16 or 256 Colors. Default value is 256.
     If it is set to 16 ,this colorscheme will attempt to use the standard 16 colors of your terminal emulator.
+    For the best colors in terminal, its recommended to set set your terminalcolors to [FlatColor Terminal Colors](#flatcolor-terminal-colors) and use 16 colors.
 
-  * g:flatcolor_bluebg
+
+  * g:flatcolor_asphaltbg
     This option sets the background color of the colorscheme to a dark blue if its value is 1.
     To set the background to a dark grey color set it to 0.
-    Default value is 0.
+    Default value is 1.
 
-    Example Flatcolor Terminal Colors:
+###FlatColor Terminal Colors###
 ```
 ! ~/.Xresource
 ! Colors
@@ -60,19 +61,3 @@ URxvt*color7:           #ecf0f1
 URxvt*color15:          #bdc3c7
 URxvt.foreground :      #bdc3c7
 ```
-
-
-### screenshots ###
-
-Python
-
-![python](http://i.imgur.com/aL2fZoy.png)
-
-ruby
-
-![ruby](http://i.imgur.com/hGJPMcy.png)
-
-VimL
-
-![viml](http://i.imgur.com/X7AOItg.png)
-
