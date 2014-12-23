@@ -62,9 +62,9 @@ let s:dark_purple = { "gui": "#8e44ad", "cterm": "55", "cterm16": "13"}
 let s:cyan = { "gui": "#1abc9c", "cterm": "116", "cterm16": "6"}
 let s:dark_cyan = { "gui": "#16a085", "cterm": "110", "cterm16": "14"}
 
-let s:clouds = { "gui": "#ecf0f1", "cterm": "244", "cterm16": "244"}
-let s:clouds_subtle = { "gui": "#DAE1E3", "cterm": "251", "cterm16": "251"}
-let s:dark_clouds = { "gui": "#BECDD1", "cterm": "254", "cterm16": "254"}
+let s:clouds = { "gui": "#ecf0f1", "cterm": "254", "cterm16": "254"}
+let s:clouds_subtle = { "gui": "#DAE1E3", "cterm": "253", "cterm16": "253"}
+let s:dark_clouds = { "gui": "#BECDD1", "cterm": "252", "cterm16": "252"}
 
 if &background == "dark"
   if g:flatcolor_asphaltbg == 1
