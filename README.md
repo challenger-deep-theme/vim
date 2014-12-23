@@ -2,7 +2,7 @@
 
 ![FlatColor](http://uppix.com/f-flatcolor_multib54997651001824f8.png)
 
-Dark, high contrast colorscheme for gvim and 256 color terminal inspired by [FlatUi Colors](http://flatuicolors.com/).
+A colorscheme for gvim and 256 color terminal inspired by [FlatUi Colors](http://flatuicolors.com/).
 
 
 ### Options ###
