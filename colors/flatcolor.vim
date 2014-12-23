@@ -107,11 +107,11 @@ function! s:h(group, style)
     unlet a:style.cterm
   endif
   if g:flatcolor_termcolors == 16
-    let l:ctermfg = (has_key(a:style, "fg") ? a:style.fg.cterm : "NONE")
-    let l:ctermbg = (has_key(a:style, "bg") ? a:style.bg.cterm : "NONE")
-  else
     let l:ctermfg = (has_key(a:style, "fg") ? a:style.fg.cterm16 : "NONE")
     let l:ctermbg = (has_key(a:style, "bg") ? a:style.bg.cterm16 : "NONE")
+  else
+    let l:ctermfg = (has_key(a:style, "fg") ? a:style.fg.cterm : "NONE")
+    let l:ctermbg = (has_key(a:style, "bg") ? a:style.bg.cterm : "NONE")
   end
   execute "highlight" a:group
     \ "guifg="   (has_key(a:style, "fg")    ? a:style.fg.gui   : "NONE")
