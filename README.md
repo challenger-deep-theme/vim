@@ -1,6 +1,6 @@
 ## FlatColor ##
 
-![FlatColor](http://uppix.com/f-flatcolor5499917900182523.png)
+![FlatColor](http://uppix.com/f-flatcolor549add3c0018269f.png)
 
 A colorscheme for gvim and 256 color terminal inspired by [FlatUi Colors](http://flatuicolors.com/).
 
@@ -23,14 +23,10 @@ A colorscheme for gvim and 256 color terminal inspired by [FlatUi Colors](http:/
 ! Colors
 
 ! Midnight Blue-Black
-! URxvt*color0:           #34495e
-! URxvt*color8:           #2c3e50
-! URxvt.background :      #2c3e50
+URxvt*color0:           #34495e
+URxvt*color8:           #2c3e50
+URxvt.background :      #2c3e50
 
-! real Black
-URxvt*color0:           #2B2B2B
-URxvt*color8:           #252525
-URxvt.background :      #252525
 
 ! Red
 URxvt*color1:           #FF0033
@@ -41,8 +37,8 @@ URxvt*color2:           #2ecc71
 URxvt*color10:          #27ae60
 
 ! Yellow
-URxvt*color3:           #f1c40f
-URxvt*color11:          #f39c12
+URxvt*color3:           #f39c12
+URxvt*color11:          #e67e22
 
 ! Blue
 URxvt*color4:           #3498db
@@ -58,6 +54,6 @@ URxvt*color14:          #16a085
 
 ! White
 URxvt*color7:           #ecf0f1
-URxvt*color15:          #bdc3c7
-URxvt.foreground :      #bdc3c7
+URxvt*color15:          #BECDD1
+URxvt.foreground :      #BECDD1
 ```
