@@ -23,10 +23,9 @@ A colorscheme for gvim and 256 color terminal inspired by [FlatUi Colors](http:/
 ! Colors
 
 ! Midnight Blue-Black
-URxvt*color0:           #34495e
-URxvt*color8:           #2c3e50
-URxvt.background :      #2c3e50
-
+ URxvt*color0:           #2c3e50
+ URxvt*color8:           #242f38
+ URxvt.background :      #242f38
 
 ! Red
 URxvt*color1:           #FF0033
@@ -55,5 +54,5 @@ URxvt*color14:          #16a085
 ! White
 URxvt*color7:           #ecf0f1
 URxvt*color15:          #BECDD1
-URxvt.foreground :      #BECDD1
+URxvt.foreground :      #ecf0f1
 ```
