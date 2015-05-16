@@ -40,31 +40,31 @@ let s:light_gray    = { "gui": "#B2B2B2", "cterm": "249", "cterm16" : "249" }
 let s:lighter_gray  = { "gui": "#C6C6C6", "cterm": "251", "cterm16" : "251" }
 
 " flat colors:
-let s:asphalt= { "gui": "#384257", "cterm": "242", "cterm16": "0"}
-let s:asphalt_subtle = { "gui": "#2c3845", "cterm": "239", "cterm16": "0"}
-let s:dark_asphalt = { "gui": "#242f38", "cterm": "237", "cterm16": "8"}
+let s:asphalt= { "gui": "#283f5a", "cterm": "242", "cterm16": "8"}
+let s:asphalt_subtle = { "gui": "#414e52", "cterm": "239", "cterm16": "0"}
+let s:dark_asphalt = { "gui": "#1e2c36", "cterm": "237", "cterm16": "NONE"}
 
 let s:red = { "gui": "#FF0033", "cterm": "197", "cterm16": "1"}
-let s:dark_red = { "gui": "#C0392B", "cterm": "196", "cterm16": "9"}
+let s:dark_red = { "gui": "#c91b19", "cterm": "196", "cterm16": "9"}
 
-let s:green = { "gui": "#2ecc71", "cterm": "35", "cterm16": "2"}
-let s:dark_green = { "gui": "#27ae60", "cterm": "36", "cterm16": "10"}
+let s:green = { "gui": "#4ecc60", "cterm": "35", "cterm16": "2"}
+let s:dark_green = { "gui": "#319242", "cterm": "36", "cterm16": "10"}
 
-let s:yellow = { "gui": "#f39c12", "cterm": "214", "cterm16": "3"}
-let s:dark_yellow = { "gui": "#e67e22", "cterm": "214", "cterm16": "3"}
+let s:yellow = { "gui": "#f3c223", "cterm": "214", "cterm16": "3"}
+let s:dark_yellow = { "gui": "#ee7c16", "cterm": "214", "cterm16": "11"}
 
-let s:blue = { "gui": "#3498db", "cterm": "33", "cterm16": "4"}
-let s:dark_blue = { "gui": "#2980b9", "cterm": "32", "cterm16": "12"}
+let s:blue = { "gui": "#329dcd", "cterm": "33", "cterm16": "4"}
+let s:dark_blue = { "gui": "#2770ca", "cterm": "32", "cterm16": "12"}
 
-let s:purple = { "gui": "#9b59b6", "cterm": "56", "cterm16": "5"}
-let s:dark_purple = { "gui": "#8e44ad", "cterm": "55", "cterm16": "13"}
+let s:purple = { "gui": "#9348b2", "cterm": "56", "cterm16": "5"}
+let s:dark_purple = { "gui": "#543c9c", "cterm": "55", "cterm16": "13"}
 
-let s:cyan = { "gui": "#1abc9c", "cterm": "116", "cterm16": "6"}
-let s:dark_cyan = { "gui": "#16a085", "cterm": "110", "cterm16": "14"}
+let s:cyan = { "gui": "#52eaba", "cterm": "116", "cterm16": "6"}
+let s:dark_cyan = { "gui": "#2c7f7e", "cterm": "110", "cterm16": "14"}
 
-let s:clouds = { "gui": "#ecf0f1", "cterm": "254", "cterm16": "7"}
-let s:clouds_subtle = { "gui": "#DAE1E3", "cterm": "253", "cterm16": "7"}
-let s:dark_clouds = { "gui": "#BECDD1", "cterm": "252", "cterm16": "15"}
+let s:clouds = { "gui": "#fbfcfc", "cterm": "254", "cterm16": "NONE"}
+let s:clouds_subtle = { "gui": "#cbe3e7", "cterm": "253", "cterm16": "7"}
+let s:dark_clouds = { "gui": "#bbc8e0", "cterm": "252", "cterm16": "15"}
 
 if &background == "dark"
   if g:flatcolor_asphaltbg == 1

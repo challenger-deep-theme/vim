@@ -1,6 +1,6 @@
 ## FlatColor ##
 
-![FlatColor](http://uppix.com/f-flatcolor549add3c0018269f.png)
+![FlatColor](http://uppix.com/f-flatcolor5557606d0018f2e8.png)
 
 A colorscheme for gvim and 256 color terminal inspired by [FlatUi Colors](http://flatuicolors.com/).
 
@@ -8,7 +8,7 @@ A colorscheme for gvim and 256 color terminal inspired by [FlatUi Colors](http:/
 ### Options ###
   * g:flatcolor_termcolors
     This options sets the terminal colors to 16 or 256 Colors. Default value is 256.
-    If it is set to 16 ,this colorscheme will attempt to use the standard 16 colors of your terminal emulator.
+    If it is set to 16 ,this colorscheme will attempt to use the standard 16 colors of your terminal emulator and background color will be the default background color of your terminal emulator.
     For the best colors in terminal, its recommended to set set your terminalcolors to [FlatColor Terminal Colors](#flatcolor-terminal-colors) and use 16 colors.
 
 
@@ -22,38 +22,40 @@ A colorscheme for gvim and 256 color terminal inspired by [FlatUi Colors](http:/
 ! ~/.Xresource
 ! Colors
 
-! Midnight Blue-Black
-URxvt*color0:           #34495e
-URxvt*color8:           #2c3e50
-URxvt.background :      #2c3e50
+! special
+*.foreground:   #fbfcfc
+*.background:   #1e2c36
+*.cursorColor:  #fbfcfc
 
+! black
+*.color0:       #414e52
+*.color8:       #283f5a
 
-! Red
-URxvt*color1:           #FF0033
-URxvt*color9:           #C0392B
+! red
+*.color1:       #ff0033
+*.color9:       #c91b19
 
-! Green
-URxvt*color2:           #2ecc71
-URxvt*color10:          #27ae60
+! green
+*.color2:       #4ecc60
+*.color10:      #319242
 
-! Yellow
-URxvt*color3:           #f39c12
-URxvt*color11:          #e67e22
+! yellow
+*.color3:       #f3c223
+*.color11:      #ee7c16
 
-! Blue
-URxvt*color4:           #3498db
-URxvt*color12:          #2980b9
+! blue
+*.color4:       #329dcd
+*.color12:      #2770ca
 
-! Magenta
-URxvt*color5:           #9b59b6
-URxvt*color13:          #8e44ad
+! magenta
+*.color5:       #9348b2
+*.color13:      #543c9c
 
-! Cyan
-URxvt*color6:           #1abc9c
-URxvt*color14:          #16a085
+! cyan
+*.color6:       #52eaba
+*.color14:      #2c7f7e
 
-! White
-URxvt*color7:           #ecf0f1
-URxvt*color15:          #BECDD1
-URxvt.foreground :      #BECDD1
+! white
+*.color7:       #ecf0f1
+*.col9or15:      #a0adb0
 ```
