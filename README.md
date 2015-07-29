@@ -1,9 +1,11 @@
 ## FlatColor ##
 
-![FlatColor](http://uppix.com/f-flatcolor5557606d0018f2e8.png)
+### Screenshots ###
+![Screenshot1](http://s17.postimg.org/mue0v4c7z/image.png)
+![Screenshot2](http://s17.postimg.org/w602s2orj/image.png)
+![Screenshot3](http://s17.postimg.org/n8fcupwbj/image.png)
 
 A colorscheme for gvim and 256 color terminal inspired by [FlatUi Colors](http://flatuicolors.com/).
-
 
 ### Options ###
   * g:flatcolor_termcolors
@@ -28,34 +30,34 @@ A colorscheme for gvim and 256 color terminal inspired by [FlatUi Colors](http:/
 *.cursorColor:  #fbfcfc
 
 ! black
-*.color0:       #414e52
-*.color8:       #283f5a
+*.color0:       #314451
+*.color8:       #111d25
 
 ! red
-*.color1:       #ff0033
-*.color9:       #c91b19
+*.color1:       #ff6767
+*.color9:       #e64040
 
 ! green
-*.color2:       #4ecc60
-*.color10:      #319242
+*.color2:       #88e094
+*.color10:      #6dc35c
 
 ! yellow
-*.color3:       #f3c223
-*.color11:      #ee7c16
+*.color3:       #ffe880
+*.color11:      #f2a562
 
 ! blue
-*.color4:       #329dcd
-*.color12:      #2770ca
+*.color4:       #7accf0
+*.color12:      #6097dc
 
 ! magenta
-*.color5:       #9348b2
-*.color13:      #543c9c
+*.color5:       #b585ca
+*.color13:      #8d73de
 
 ! cyan
-*.color6:       #52eaba
-*.color14:      #2c7f7e
+*.color6:       #7ee8c6
+*.color14:      #53d3d2
 
 ! white
-*.color7:       #ecf0f1
-*.col9or15:      #a0adb0
+*.color7:       #cbe3e7
+*.color15:      #bbc8e0
 ```

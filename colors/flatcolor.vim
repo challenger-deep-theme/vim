@@ -40,27 +40,27 @@ let s:light_gray    = { "gui": "#B2B2B2", "cterm": "249", "cterm16" : "249" }
 let s:lighter_gray  = { "gui": "#C6C6C6", "cterm": "251", "cterm16" : "251" }
 
 " flat colors:
-let s:asphalt= { "gui": "#283f5a", "cterm": "242", "cterm16": "8"}
-let s:asphalt_subtle = { "gui": "#414e52", "cterm": "239", "cterm16": "0"}
+let s:asphalt= { "gui": "#111d25", "cterm": "242", "cterm16": "8"}
+let s:asphalt_subtle = { "gui": "#314451", "cterm": "239", "cterm16": "0"}
 let s:dark_asphalt = { "gui": "#1e2c36", "cterm": "237", "cterm16": "NONE"}
 
-let s:red = { "gui": "#FF0033", "cterm": "197", "cterm16": "1"}
-let s:dark_red = { "gui": "#c91b19", "cterm": "196", "cterm16": "9"}
+let s:red = { "gui": "#ff6767", "cterm": "197", "cterm16": "1"}
+let s:dark_red = { "gui": "#e64040", "cterm": "196", "cterm16": "9"}
 
-let s:green = { "gui": "#4ecc60", "cterm": "35", "cterm16": "2"}
-let s:dark_green = { "gui": "#319242", "cterm": "36", "cterm16": "10"}
+let s:green = { "gui": "#88e094", "cterm": "35", "cterm16": "2"}
+let s:dark_green = { "gui": "#6dc35c", "cterm": "36", "cterm16": "10"}
 
-let s:yellow = { "gui": "#f3c223", "cterm": "214", "cterm16": "3"}
-let s:dark_yellow = { "gui": "#ee7c16", "cterm": "214", "cterm16": "11"}
+let s:yellow = { "gui": "#ffe880", "cterm": "214", "cterm16": "3"}
+let s:dark_yellow = { "gui": "#f2a562", "cterm": "214", "cterm16": "11"}
 
-let s:blue = { "gui": "#329dcd", "cterm": "33", "cterm16": "4"}
-let s:dark_blue = { "gui": "#2770ca", "cterm": "32", "cterm16": "12"}
+let s:blue = { "gui": "#7accf0", "cterm": "33", "cterm16": "4"}
+let s:dark_blue = { "gui": "#6097dc", "cterm": "32", "cterm16": "12"}
 
-let s:purple = { "gui": "#9348b2", "cterm": "56", "cterm16": "5"}
-let s:dark_purple = { "gui": "#543c9c", "cterm": "55", "cterm16": "13"}
+let s:purple = { "gui": "#b585ca", "cterm": "56", "cterm16": "5"}
+let s:dark_purple = { "gui": "#8d73de", "cterm": "55", "cterm16": "13"}
 
-let s:cyan = { "gui": "#52eaba", "cterm": "116", "cterm16": "6"}
-let s:dark_cyan = { "gui": "#2c7f7e", "cterm": "110", "cterm16": "14"}
+let s:cyan = { "gui": "#7ee8c6", "cterm": "116", "cterm16": "6"}
+let s:dark_cyan = { "gui": "#53d3d2", "cterm": "110", "cterm16": "14"}
 
 let s:clouds = { "gui": "#fbfcfc", "cterm": "254", "cterm16": "NONE"}
 let s:clouds_subtle = { "gui": "#cbe3e7", "cterm": "253", "cterm16": "7"}
@@ -185,8 +185,8 @@ call s:h("IncSearch",     {"bg": s:red, "fg": s:clouds})
 call s:h("Search",        {"bg": s:bg_subtle})
 call s:h("MoreMsg",       {"fg": s:medium_gray, "gui": "bold", "cterm": "bold"})
 hi! link ModeMsg MoreMsg
-call s:h("LineNr",        {"fg": s:bg_subtle})
-call s:h("CursorLineNr",  {"fg": s:blue, "bg": s:bg_very_subtle})
+call s:h("LineNr",        {"bg": s:bg_subtle, "fg": s:bg_very_subtle})
+call s:h("CursorLineNr",  {"fg": s:blue})
 call s:h("Question",      {"fg": s:red})
 call s:h("StatusLine",    {"bg": s:bg_very_subtle})
 call s:h("Conceal",       {"fg": s:norm})
