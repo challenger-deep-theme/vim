@@ -333,7 +333,7 @@ hi! link xmlTagName                 htmlTagName
 hi link SignifySignAdd              LineNr
 hi link SignifySignDelete           LineNr
 hi link SignifySignChange           LineNr
-hi link GitGutterAdd                LineNr
-hi link GitGutterDelete             LineNr
-hi link GitGutterChange             LineNr
-hi link GitGutterChangeDelete       LineNr
+call s:h("GitGutterAdd",{"bg": s:bg_subtle, "fg": s:green})
+call s:h("GitGutterDelete",{"bg": s:bg_subtle, "fg": s:red})
+call s:h("GitGutterChange",{"bg": s:bg_subtle, "fg": s:yellow})
+call s:h("GitGutterChangeDelete",{"bg": s:bg_subtle, "fg": s:red})
