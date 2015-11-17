@@ -17,10 +17,6 @@ if ! exists("g:flatcolor_termcolors")
   let g:flatcolor_termcolors = 256
 endif
 
-if ! exists("g:flatcolor_asphaltbg")
-  let g:flatcolor_asphaltbg = 1
-endif
-
 " not all terminals support italics properly.  If yours does, opt-in.
 if ! exists("g:flatcolor_terminal_italics")
   let g:flatcolor_terminal_italics = 0
@@ -40,53 +36,47 @@ let s:light_gray    = { "gui": "#B2B2B2", "cterm": "249", "cterm16" : "249" }
 let s:lighter_gray  = { "gui": "#C6C6C6", "cterm": "251", "cterm16" : "251" }
 
 " flat colors:
-let s:asphalt= { "gui": "#111d25", "cterm": "242", "cterm16": "8"}
-let s:asphalt_subtle = { "gui": "#314451", "cterm": "239", "cterm16": "0"}
-let s:dark_asphalt = { "gui": "#1e2c36", "cterm": "237", "cterm16": "NONE"}
+let s:asphalt = { "gui": "#262e3e", "cterm": "235", "cterm16": "NONE"}
+let s:asphalt_subtle= { "gui": "#161f2f", "cterm": "236", "cterm16": "8"}
+let s:dark_asphalt = { "gui": "#4e5a75", "cterm": "234", "cterm16": "0"}
 
-let s:red = { "gui": "#ff6767", "cterm": "197", "cterm16": "1"}
-let s:dark_red = { "gui": "#e64040", "cterm": "196", "cterm16": "9"}
+let s:red = { "gui": "#ff7c7c", "cterm": "204", "cterm16": "1"}
+let s:dark_red = { "gui": "#ff5454", "cterm": "203", "cterm16": "9"}
 
-let s:green = { "gui": "#88e094", "cterm": "35", "cterm16": "2"}
-let s:dark_green = { "gui": "#6dc35c", "cterm": "36", "cterm16": "10"}
+let s:green = { "gui": "#95ffa4", "cterm": "120", "cterm16": "2"}
+let s:dark_green = { "gui": "#89ff72", "cterm": "119", "cterm16": "10"}
 
-let s:yellow = { "gui": "#ffe880", "cterm": "214", "cterm16": "3"}
-let s:dark_yellow = { "gui": "#f2a562", "cterm": "214", "cterm16": "11"}
+let s:yellow = { "gui": "#ffeb8f", "cterm": "228", "cterm16": "3"}
+let s:dark_yellow = { "gui": "#ffb16e", "cterm": "215", "cterm16": "11"}
 
-let s:blue = { "gui": "#7accf0", "cterm": "33", "cterm16": "4"}
-let s:dark_blue = { "gui": "#6097dc", "cterm": "32", "cterm16": "12"}
+let s:blue = { "gui": "#91ddff", "cterm": "159", "cterm16": "4"}
+let s:dark_blue = { "gui": "#6097dc", "cterm": "75", "cterm16": "12"}
 
-let s:purple = { "gui": "#b585ca", "cterm": "56", "cterm16": "5"}
-let s:dark_purple = { "gui": "#8d73de", "cterm": "55", "cterm16": "13"}
+let s:purple = { "gui": "#b585ca", "cterm": "141", "cterm16": "5"}
+let s:dark_purple = { "gui": "#8d73de", "cterm": "135", "cterm16": "13"}
 
-let s:cyan = { "gui": "#7ee8c6", "cterm": "116", "cterm16": "6"}
-let s:dark_cyan = { "gui": "#53d3d2", "cterm": "110", "cterm16": "14"}
+let s:cyan = { "gui": "#85f9d4", "cterm": "122", "cterm16": "6"}
+let s:dark_cyan = { "gui": "#53d3d2", "cterm": "121", "cterm16": "14"}
 
 let s:clouds = { "gui": "#fbfcfc", "cterm": "254", "cterm16": "NONE"}
 let s:clouds_subtle = { "gui": "#cbe3e7", "cterm": "253", "cterm16": "7"}
-let s:dark_clouds = { "gui": "#bbc8e0", "cterm": "252", "cterm16": "15"}
+let s:dark_clouds = { "gui": "#a6b3cc", "cterm": "252", "cterm16": "15"}
 
 if &background == "dark"
-  if g:flatcolor_asphaltbg == 1
-    let s:bg              = s:dark_asphalt
-    let s:bg_subtle       = s:asphalt
-    let s:bg_very_subtle  = s:asphalt_subtle
-  else
-    let s:bg              = s:black
-    let s:bg_subtle       = s:light_black
-    let s:bg_very_subtle  = s:subtle_black
-  end
+  let s:bg              = s:asphalt
+  let s:bg_subtle       = s:asphalt_subtle
+  let s:bg_dark         = s:dark_asphalt
   let s:norm            = s:lighter_gray
   let s:norm_subtle     = s:light_gray
   let s:purple          = s:purple
   let s:cyan            = s:cyan
   let s:green           = s:green
   let s:red             = s:red
-  let s:visual          = s:lighter_black
+  let s:visual          = s:bg_dark
 else
   let s:bg              = s:clouds
   let s:bg_subtle       = s:dark_clouds
-  let s:bg_very_subtle  = s:clouds_subtle
+  let s:bg_dark  = s:clouds_subtle
   let s:norm            = s:light_black
   let s:norm_subtle     = s:lighter_black
   let s:purple          = s:dark_purple
@@ -127,7 +117,7 @@ endfunction
 " (see `:h w18`)
 
 call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
-call s:h("Cursor",        {"bg": s:blue, "fg": s:norm })
+call s:h("Cursor",        {"bg": s:bg_dark, "fg": s:norm })
 call s:h("Comment",       {"fg": s:medium_gray, "gui": "italic", "cterm": "italic"})
 
 call s:h("Constant",      {"fg": s:yellow})
@@ -178,23 +168,22 @@ call s:h("SpecialKey",    {"fg": s:blue})
 call s:h("Boolean",    {"fg": s:purple})
 call s:h("Number",    {"fg": s:purple})
 call s:h("Float",    {"fg": s:purple})
-call s:h("NonText",       {"fg": s:bg_subtle})
+call s:h("NonText",       {"fg": s:bg_dark})
 call s:h("Directory",     {"fg": s:purple})
 call s:h("ErrorMsg",      {"fg": s:dark_red})
 call s:h("IncSearch",     {"bg": s:red, "fg": s:clouds})
-call s:h("Search",        {"bg": s:bg_subtle})
+call s:h("Search",        {"bg": s:bg_dark})
 call s:h("MoreMsg",       {"fg": s:medium_gray, "gui": "bold", "cterm": "bold"})
 hi! link ModeMsg MoreMsg
-call s:h("LineNr",        {"bg": s:bg_subtle, "fg": s:bg_very_subtle})
-call s:h("CursorLineNr",  {"fg": s:blue})
+call s:h("LineNr",        {"fg": s:bg_dark})
+call s:h("CursorLineNr",  {"bg": s:bg_subtle, "fg": s:bg_dark})
 call s:h("Question",      {"fg": s:red})
-call s:h("StatusLine",    {"bg": s:bg_very_subtle})
+call s:h("StatusLine",    {"bg": s:bg_dark})
 call s:h("Conceal",       {"fg": s:norm})
-call s:h("StatusLineNC",  {"bg": s:bg_very_subtle, "fg": s:medium_gray})
-call s:h("VertSplit",     {"bg": s:bg_very_subtle, "fg": s:bg_very_subtle})
+call s:h("StatusLineNC",  {"bg": s:bg_dark, "fg": s:medium_gray})
+call s:h("VertSplit",     {"bg": s:bg_dark, "fg": s:bg_dark})
 call s:h("Title",         {"fg": s:dark_blue})
 call s:h("Visual",        {"bg": s:visual})
-call s:h("VisualNOS",     {"bg": s:bg_subtle})
 call s:h("WarningMsg",    {"fg": s:yellow})
 call s:h("WildMenu",      {"fg": s:bg, "bg": s:norm})
 call s:h("Folded",        {"fg": s:medium_gray})
@@ -216,16 +205,16 @@ else
   call s:h("SpellRare",   {"cterm": "underline", "fg": s:red})
   call s:h("SpellLocal",  {"cterm": "underline", "fg": s:dark_green})
 endif
-call s:h("Pmenu",         {"fg": s:norm, "bg": s:bg_subtle})
-call s:h("PmenuSel",      {"fg": s:norm, "bg": s:blue})
+call s:h("Pmenu",         {"fg": s:norm, "bg": s:bg_dark})
+call s:h("PmenuSel",      {"fg": s:norm, "bg": s:bg_subtle})
 call s:h("PmenuSbar",     {"fg": s:norm, "bg": s:bg_subtle})
 call s:h("PmenuThumb",    {"fg": s:norm, "bg": s:bg_subtle})
-call s:h("TabLine",       {"fg": s:norm, "bg": s:bg_very_subtle})
-call s:h("TabLineSel",    {"fg": s:blue, "bg": s:bg_subtle, "gui": "bold", "cterm": "bold"})
-call s:h("TabLineFill",   {"fg": s:norm, "bg": s:bg_very_subtle})
-call s:h("CursorColumn",  {"bg": s:bg_very_subtle})
-call s:h("CursorLine",    {"bg": s:bg_very_subtle})
-call s:h("ColorColumn",   {"bg": s:bg_subtle})
+call s:h("TabLine",       {"fg": s:norm, "bg": s:bg_dark})
+call s:h("TabLineSel",    {"fg": s:norm, "bg": s:bg_subtle, "gui": "bold", "cterm": "bold"})
+call s:h("TabLineFill",   {"fg": s:norm, "bg": s:bg_dark})
+call s:h("CursorColumn",  {"bg": s:bg_subtle})
+call s:h("CursorLine",    {"bg": s:bg_subtle})
+call s:h("ColorColumn",   {"bg": s:bg_dark})
 
 " remainder of syntax highlighting
 call s:h("MatchParen",    {"bg": s:bg_subtle, "fg": s:norm})
@@ -333,7 +322,7 @@ hi! link xmlTagName                 htmlTagName
 hi link SignifySignAdd              LineNr
 hi link SignifySignDelete           LineNr
 hi link SignifySignChange           LineNr
-call s:h("GitGutterAdd",{"bg": s:bg_subtle, "fg": s:green})
-call s:h("GitGutterDelete",{"bg": s:bg_subtle, "fg": s:red})
-call s:h("GitGutterChange",{"bg": s:bg_subtle, "fg": s:yellow})
-call s:h("GitGutterChangeDelete",{"bg": s:bg_subtle, "fg": s:red})
+call s:h("GitGutterAdd",{"fg": s:green})
+call s:h("GitGutterDelete",{"fg": s:red})
+call s:h("GitGutterChange",{"fg": s:yellow})
+call s:h("GitGutterChangeDelete",{"fg": s:red})
