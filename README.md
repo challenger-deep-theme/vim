@@ -1,12 +1,22 @@
 ## FlatColor ##
 
-### Screenshots ###
+### Terminal True Color Support ###
+  Add this to your .vimrc to enable true colors:
+```
+if has('patch-7.4.1778')
+  set guicolors
+endif
+if has('nvim')
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+```
 
-![Screenshot1](http://s1.postimg.org/x25p0axa7/one.png)
-![Screenshot2](http://s1.postimg.org/jvg90s1kv/two.png)
+### Screenshot ###
+
+![Screenshot](http://s32.postimg.org/azjzcnabp/flatcolor.png)
 
 ### Options ###
-  * g:flatcolor_termcolors
+  * **g:flatcolor_termcolors**:  
     This options sets the terminal colors to 16 or 256 Colors. Default value is 256.
     If it is set to 16 ,this colorscheme will attempt to use the standard 16 colors of your terminal emulator and background color will be the default background color of your terminal emulator.
     For the best colors in terminal, its recommended to set set your terminalcolors to [FlatColor Terminal Colors](#flatcolor-terminal-colors) and use 16 colors.
@@ -15,14 +25,13 @@
 ###FlatColor Terminal Colors###
 ```
 ! ~/.Xresource
-! Colors
 *.foreground:   #fbfcfc
-*.background:   #1d1f36
+*.background:   #171338
 *.cursorColor:  #fbfcfc
 
 ! black
-*.color0:       #4e536b
-*.color8:       #101428
+*.color0:       #565575
+*.color8:       #100E23
 
 ! red
 *.color1:       #ff8080

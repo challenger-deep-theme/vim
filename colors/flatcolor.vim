@@ -12,6 +12,8 @@ if exists('syntax on')
 endif
 
 let g:colors_name='flatcolor'
+set background=dark
+
 
 if ! exists("g:flatcolor_termcolors")
   let g:flatcolor_termcolors = 256
@@ -36,9 +38,9 @@ let s:light_gray    = { "gui": "#B2B2B2", "cterm": "249", "cterm16" : "249" }
 let s:lighter_gray  = { "gui": "#C6C6C6", "cterm": "251", "cterm16" : "251" }
 
 " flat colors:
-let s:asphalt = { "gui": "#1d1f36", "cterm": "235", "cterm16": "NONE"}
-let s:asphalt_subtle= { "gui": "#101428", "cterm": "236", "cterm16": "8"}
-let s:dark_asphalt = { "gui": "#4e536b", "cterm": "234", "cterm16": "0"}
+let s:asphalt = { "gui": "#171338", "cterm": "233", "cterm16": "NONE"}
+let s:asphalt_subtle= { "gui": "#100E23", "cterm": "232", "cterm16": "8"}
+let s:dark_asphalt = { "gui": "#565575", "cterm": "236", "cterm16": "0"}
 
 let s:red = { "gui": "#ff8080", "cterm": "204", "cterm16": "1"}
 let s:dark_red = { "gui": "#ff5458", "cterm": "203", "cterm16": "9"}
@@ -62,29 +64,12 @@ let s:clouds = { "gui": "#fbfcfc", "cterm": "254", "cterm16": "NONE"}
 let s:clouds_subtle = { "gui": "#cbe3e7", "cterm": "253", "cterm16": "7"}
 let s:dark_clouds = { "gui": "#a6b3cc", "cterm": "252", "cterm16": "15"}
 
-if &background == "dark"
-  let s:bg              = s:asphalt
-  let s:bg_subtle       = s:asphalt_subtle
-  let s:bg_dark         = s:dark_asphalt
-  let s:norm            = s:lighter_gray
-  let s:norm_subtle     = s:light_gray
-  let s:purple          = s:purple
-  let s:cyan            = s:cyan
-  let s:green           = s:green
-  let s:red             = s:red
-  let s:visual          = s:bg_dark
-else
-  let s:bg              = s:clouds
-  let s:bg_subtle       = s:dark_clouds
-  let s:bg_dark  = s:clouds_subtle
-  let s:norm            = s:light_black
-  let s:norm_subtle     = s:lighter_black
-  let s:purple          = s:dark_purple
-  let s:cyan            = s:dark_cyan
-  let s:green           = s:dark_green
-  let s:red             = s:dark_red
-  let s:visual          = s:blue
-endif
+let s:bg              = s:asphalt
+let s:bg_subtle       = s:asphalt_subtle
+let s:bg_dark         = s:dark_asphalt
+let s:norm            = s:clouds
+let s:norm_subtle     = s:clouds_subtle
+let s:visual          = s:bg_dark
 
 let s:head_a         = s:dark_blue
 let s:head_b         = s:blue
@@ -175,7 +160,7 @@ call s:h("IncSearch",     {"bg": s:red, "fg": s:clouds})
 call s:h("Search",        {"bg": s:bg_dark})
 call s:h("MoreMsg",       {"fg": s:medium_gray, "gui": "bold", "cterm": "bold"})
 hi! link ModeMsg MoreMsg
-call s:h("LineNr",        {"fg": s:bg_dark, "bg": s:bg_subtle})
+call s:h("LineNr",        {"fg": s:dark_asphalt, "bg": s:bg_subtle})
 call s:h("CursorLineNr",  {"bg": s:blue, "fg": s:bg_subtle})
 call s:h("Question",      {"fg": s:red})
 call s:h("StatusLine",    {"bg": s:bg_dark})
@@ -185,7 +170,7 @@ call s:h("VertSplit",     {"fg": s:bg_subtle})
 call s:h("Title",         {"fg": s:dark_blue})
 call s:h("Visual",        {"bg": s:visual})
 call s:h("WarningMsg",    {"fg": s:yellow})
-call s:h("WildMenu",      {"fg": s:bg, "bg": s:norm})
+call s:h("WildMenu",      {"fg": s:bg_subtle, "bg": s:cyan})
 call s:h("Folded",        {"bg": s:purple, "fg": s:bg_subtle})
 call s:h("FoldColumn",    {"fg": s:yellow})
 call s:h("DiffAdd",       {"fg": s:green})
@@ -252,7 +237,7 @@ call s:h("markdownH1",                  {"fg": s:head_a, "gui": "bold,italic", "
 call s:h("markdownH2",                  {"fg": s:head_a, "gui": "bold"       , "cterm": "bold"  })
 call s:h("markdownH3",                  {"fg": s:head_a, "gui": "italic"     , "cterm": "italic"})
 call s:h("markdownH4",                  {"fg": s:head_a, "gui": "italic"     , "cterm": "italic"})
-call s:h("markdownH5",                  {"fg": s:head_a})
+call s:h("mckarkdownH5",                  {"fg": s:head_a})
 call s:h("markdownH6",                  {"fg": s:head_a})
 call s:h("markdownHeadingDelimiter",    {"fg": s:norm})
 call s:h("markdownHeadingRule",         {"fg": s:norm})
@@ -326,3 +311,22 @@ call s:h("GitGutterAdd",{"fg": s:green})
 call s:h("GitGutterDelete",{"fg": s:red})
 call s:h("GitGutterChange",{"fg": s:yellow})
 call s:h("GitGutterChangeDelete",{"fg": s:red})
+
+
+"nvim terminal colors
+let g:terminal_color_0 = s:bg_dark.gui
+let g:terminal_color_1 = s:red.gui
+let g:terminal_color_2 = s:green.gui
+let g:terminal_color_3 = s:yellow.gui
+let g:terminal_color_4 = s:blue.gui
+let g:terminal_color_5 = s:purple.gui
+let g:terminal_color_6 = s:cyan.gui
+let g:terminal_color_7 = s:clouds.gui
+let g:terminal_color_8 = s:bg_subtle.gui
+let g:terminal_color_9 = s:dark_red.gui
+let g:terminal_color_10 = s:dark_green.gui
+let g:terminal_color_11 = s:dark_yellow.gui
+let g:terminal_color_12 = s:dark_blue.gui
+let g:terminal_color_13 = s:dark_purple.gui
+let g:terminal_color_14 = s:dark_cyan.gui
+let g:terminal_color_15 = s:dark_clouds.gui
