@@ -13,7 +13,7 @@ endif
 
 ### Screenshot ###
 
-![Screenshot](http://s32.postimg.org/azjzcnabp/flatcolor.png)
+![Screenshot](http://s33.postimg.org/6cnqpx9bz/flatcolor.png)
 
 ### Options ###
   * **g:flatcolor_termcolors**:  
@@ -25,13 +25,13 @@ endif
 ###FlatColor Terminal Colors###
 ```
 ! ~/.Xresource
-*.foreground:   #fbfcfc
-*.background:   #171338
+*.foreground:   #cbe3e7
+*.background:   #1e1c31
 *.cursorColor:  #fbfcfc
 
 ! black
 *.color0:       #565575
-*.color8:       #100E23
+*.color8:       #100e23
 
 ! red
 *.color1:       #ff8080

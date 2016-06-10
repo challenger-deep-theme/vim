@@ -1,7 +1,7 @@
 " Colors
 let s:black           = { "gui": "#212121", "cterm": "0", "cterm16" : "0" }
 let s:medium_gray     = { "gui": "#767676", "cterm": "243", "cterm16" : "243" }
-let s:white           = { "gui": "#F1F1F1", "cterm": "15", "cterm16" : "15" }
+let s:white           = { "gui": "#F3F3F3", "cterm": "15", "cterm16" : "15" }
 let s:actual_white    = { "gui": "#FFFFFF", "cterm": "231", "cterm16" : "231" }
 let s:light_black     = { "gui": "#424242", "cterm": "8", "cterm16" : "8" }
 let s:lighter_black   = { "gui": "#545454", "cterm": "240", "cterm16" : "240" }
@@ -12,7 +12,7 @@ let s:light_gray    = { "gui": "#B2B2B2", "cterm": "249", "cterm16" : "249" }
 let s:lighter_gray  = { "gui": "#C6C6C6", "cterm": "251", "cterm16" : "251" }
 
 " flat colors:
-let s:asphalt = { "gui": "#171338", "cterm": "233", "cterm16": "NONE"}
+let s:asphalt = { "gui": "#1e1c31", "cterm": "233", "cterm16": "NONE"}
 let s:asphalt_subtle= { "gui": "#100E23", "cterm": "232", "cterm16": "8"}
 let s:dark_asphalt = { "gui": "#565575", "cterm": "236", "cterm16": "0"}
 
@@ -34,15 +34,15 @@ let s:dark_purple = { "gui": "#906cff", "cterm": "135", "cterm16": "13"}
 let s:cyan = { "gui": "#aaffe4", "cterm": "122", "cterm16": "6"}
 let s:dark_cyan = { "gui": "#63f2f1", "cterm": "121", "cterm16": "14"}
 
-let s:clouds = { "gui": "#fbfcfc", "cterm": "254", "cterm16": "NONE"}
-let s:clouds_subtle = { "gui": "#cbe3e7", "cterm": "253", "cterm16": "7"}
+let s:clouds = { "gui": "#cbe3e7", "cterm": "253", "cterm16": "7"}
 let s:dark_clouds = { "gui": "#a6b3cc", "cterm": "252", "cterm16": "15"}
 
 let s:bg              = s:asphalt
 let s:bg_subtle       = s:asphalt_subtle
 let s:bg_dark         = s:dark_asphalt
-let s:norm            = s:lighter_gray
-let s:norm_subtle     = s:light_gray
+let s:norm            = s:clouds
+let s:norm_subtle     = s:dark_clouds
+let s:visual          = s:bg_dark
 
 " lightline flat colors:
 let s:lfc = {
@@ -71,7 +71,6 @@ let s:lfc = {
       \'cyan' : [s:cyan.gui, s:cyan.cterm16],
       \'dark_cyan' : [s:dark_cyan.gui, s:dark_cyan.cterm16],
       \'clouds' : [s:clouds.gui, s:clouds.cterm16],
-      \'clouds_subtle' : [s:clouds_subtle.gui, s:clouds_subtle.cterm16],
       \'dark_clouds' : [s:dark_clouds.gui, s:dark_clouds.cterm16],
       \'bg': [s:bg.gui, s:bg.cterm16],
       \'bg_subtle': [s:bg_subtle.gui, s:bg_subtle.cterm16],
