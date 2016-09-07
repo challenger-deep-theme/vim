@@ -66,7 +66,7 @@ endif
 
 ![Lightline](http://s1.postimg.org/k6t3zssn3/lightline.png)
 
-FlatColor supports [lightline.vim][lightline.vim]. To enable the colorscheme,
+FlatColor supports [lightline.vim](https://github.com/itchyny/lightline.vim). To enable the colorscheme,
 add one of the following lines to your `.vimrc`:
 
 ``` viml
