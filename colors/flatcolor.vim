@@ -107,26 +107,30 @@ call s:h("Comment",       {"fg": s:medium_gray, "gui": "italic", "cterm": "itali
 call s:h("Constant",      {"fg": s:yellow})
 hi! link String           Constant
 hi! link Character        Constant
-hi! link Number           Constant
+
+call s:h("Number",       {"fg": s:dark_yellow})
 hi! link Boolean          Constant
 hi! link Float            Constant
 
-call s:h("Identifier",    {"fg": s:dark_yellow})
+call s:h("Identifier",    {"fg": s:purple})
 hi! link Function         Identifier
 
-call s:h("Statement",     {"fg": s:red})
+call s:h("Label",        {"fg": s:dark_blue})
 hi! link Conditonal       Statement
-hi! link Repeat           Statement
-hi! link Label            Statement
-hi! link Operator         Statement
-hi! link Keyword          Statement
 hi! link Exception        Statement
+
+call s:h("Operator",     {"fg": s:dark_cyan})
+hi! link Repeat           Operator
 
 call s:h("PreProc",       {"fg": s:green})
 hi! link Include          PreProc
 hi! link Define           PreProc
 hi! link Macro            PreProc
 hi! link PreCondit        PreProc
+
+
+call s:h("Keyword",       {"fg": s:red})
+hi! link Statement        Keyword
 
 call s:h("Type",          {"fg": s:blue})
 hi! link StorageClass     Type
@@ -149,9 +153,9 @@ call s:h("Todo",          {"fg": s:actual_white, "bg": s:blue, "gui": "bold"    
 " ordered according to `:help hitest.vim`
 
 call s:h("SpecialKey",    {"fg": s:blue})
-call s:h("Boolean",    {"fg": s:purple})
-call s:h("Number",    {"fg": s:purple})
-call s:h("Float",    {"fg": s:purple})
+call s:h("Boolean",    {"fg": s:dark_yellow})
+call s:h("Number",    {"fg": s:dark_yellow})
+call s:h("Float",    {"fg": s:dark_yellow})
 call s:h("NonText",       {"fg": s:bg_dark})
 call s:h("Directory",     {"fg": s:purple})
 call s:h("ErrorMsg",      {"fg": s:dark_red})
