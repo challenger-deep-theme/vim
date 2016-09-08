@@ -13,7 +13,7 @@ endif
 
 ### Screenshot ###
 
-![Screenshot](http://s33.postimg.org/6cnqpx9bz/flatcolor.png)
+![Screenshot](https://s12.postimg.org/cyiwvuxwd/flatcolor.png)
 
 ### Options ###
   * **g:flatcolor_termcolors**:  
