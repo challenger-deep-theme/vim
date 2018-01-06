@@ -1,6 +1,6 @@
 ![Challenger Deep](https://s17.postimg.org/8b54c0ia7/challenger-deep.png)
 
-### Challenger Deep Theme for VIM
+### [Challenger Deep Theme](https://challenger-deep-theme.github.io/) for VIM
 
 To enable this color scheme, set it in your vimrc:
 ```
