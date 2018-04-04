@@ -15,6 +15,13 @@ if has('nvim') || has('termguicolors')
 endif
 ```
 
+### Installation
+
+#### vim-plug ###
+```
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+```
+
 ### Screenshot ###
 
 ![Screenshot](https://s12.postimg.org/cyiwvuxwd/flatcolor.png)
