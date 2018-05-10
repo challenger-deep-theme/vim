@@ -101,7 +101,7 @@ endfunction
 " (see `:h w18`)
 
 call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
-call s:h("Cursor",        {"bg": s:bg_dark, "fg": s:norm })
+call s:h("Cursor",        {"bg": s:blue, "fg": s:bg_dark})
 call s:h("Comment",       {"fg": s:medium_gray, "gui": "italic", "cterm": "italic"})
 
 call s:h("Constant",      {"fg": s:yellow})
