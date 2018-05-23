@@ -146,8 +146,8 @@ hi! link Debug            Special
 
 call s:h("Underlined",    {"fg": s:norm                      , "gui": "underline", "cterm": "underline"})
 call s:h("Ignore",        {"fg": s:bg                                                                  })
-call s:h("Error",         {"fg": s:actual_white, "bg": s:dark_red , "gui": "bold"     , "cterm": "bold"     })
-call s:h("Todo",          {"fg": s:actual_white, "bg": s:blue, "gui": "bold"     , "cterm": "bold"     })
+call s:h("Error",         {"fg": s:dark_red, "bg": s:bg_subtle , "gui": "bold"     , "cterm": "bold"     })
+call s:h("Todo",          {"fg": s:dark_yellow, "bg": s:bg_subtle, "gui": "bold"     , "cterm": "bold"     })
 
 " ui chrome ====================================================================
 " ordered according to `:help hitest.vim`
@@ -310,10 +310,10 @@ hi! link xmlTagName                 htmlTagName
 hi link SignifySignAdd              LineNr
 hi link SignifySignDelete           LineNr
 hi link SignifySignChange           LineNr
-call s:h("GitGutterAdd",{"fg": s:green})
-call s:h("GitGutterDelete",{"fg": s:red})
-call s:h("GitGutterChange",{"fg": s:yellow})
-call s:h("GitGutterChangeDelete",{"fg": s:red})
+call s:h("GitGutterAdd",{"fg": s:green, "bg": s:bg_subtle})
+call s:h("GitGutterDelete",{"fg": s:red, "bg": s:bg_subtle})
+call s:h("GitGutterChange",{"fg": s:yellow, "bg": s:bg_subtle})
+call s:h("GitGutterChangeDelete",{"fg": s:red, "bg": s:bg_subtle})
 
 
 "nvim terminal colors
