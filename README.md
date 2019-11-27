@@ -23,7 +23,7 @@ Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 ```
 #### vundle ###
 ```
-Plugin 'challenger-deep-theme/vim'
+Plugin 'challenger-deep-theme/vim', {'name': 'challenger-deep-theme'}
 ```
 
 ### Screenshot ###
