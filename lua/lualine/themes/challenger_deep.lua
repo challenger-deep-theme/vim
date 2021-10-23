@@ -5,41 +5,41 @@
 -- =============================================================================
 
 local colors = {
-  color10  = "#95ffa4",
-  color2   = "#aaffe4",
-  color0   = "#100E23",
-  color9   = "#62d196",
-  color4   = "#ffb378",
-  color3   = "#F3F3F3",
-  color14  = "#ff8080",
-  color1   = "#63f2f1",
-  color13  = "#ff5458",
-  color5   = "#ffe9aa",
-  color8   = "#565575",
+  red            = "#ff8080",
+  green          = "#95ffa4",
+  yellow         = "#ffe9aa",
+  cyan           = "#aaffe4",
+  white          = "#F3F3F3",
+  dark_red       = "#ff5458",
+  dark_green     = "#62d196",
+  dark_yellow    = "#ffb378",
+  dark_cyan      = "#63f2f1",
+  dark_asphalt   = "#565575",
+  asphalt_subtle = "#100E23",
 }
 
 local challenger_deep = {
   normal = {
-    b = { fg = colors.color0, bg = colors.color1 },
-    a = { fg = colors.color0, bg = colors.color2 , gui = "bold", },
-    c = { fg = colors.color3, bg = colors.color0 },
+    b = { fg = colors.asphalt_subtle, bg = colors.dark_cyan },
+    a = { fg = colors.asphalt_subtle, bg = colors.cyan , gui = "bold", },
+    c = { fg = colors.white, bg = colors.asphalt_subtle },
   },
   visual = {
-    b = { fg = colors.color0, bg = colors.color4 },
-    a = { fg = colors.color0, bg = colors.color5 , gui = "bold", },
+    b = { fg = colors.asphalt_subtle, bg = colors.dark_yellow },
+    a = { fg = colors.asphalt_subtle, bg = colors.yellow , gui = "bold", },
   },
   inactive = {
-    b = { fg = colors.color8, bg = colors.color0 },
-    a = { fg = colors.color8, bg = colors.color0 , gui = "bold", },
-    c = { fg = colors.color8, bg = colors.color0 },
+    b = { fg = colors.dark_asphalt, bg = colors.asphalt_subtle },
+    a = { fg = colors.dark_asphalt, bg = colors.asphalt_subtle , gui = "bold", },
+    c = { fg = colors.dark_asphalt, bg = colors.asphalt_subtle },
   },
   replace = {
-    b = { fg = colors.color0, bg = colors.color9 },
-    a = { fg = colors.color0, bg = colors.color10 , gui = "bold", },
+    b = { fg = colors.asphalt_subtle, bg = colors.dark_green },
+    a = { fg = colors.asphalt_subtle, bg = colors.green , gui = "bold", },
   },
   insert = {
-    b = { fg = colors.color0, bg = colors.color13 },
-    a = { fg = colors.color0, bg = colors.color14 , gui = "bold", },
+    b = { fg = colors.asphalt_subtle, bg = colors.dark_red },
+    a = { fg = colors.asphalt_subtle, bg = colors.red , gui = "bold", },
   },
 }
 
